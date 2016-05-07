@@ -468,7 +468,7 @@ body {
 .header-inner {
   margin: 0 auto;
   padding: 100px 0 70px;
-  width: 700px;
+  width: 100%;
 }
 @media (min-width: 1600px) {
   .container .header-inner {
@@ -480,7 +480,7 @@ body {
 }
 .main-inner {
   margin: 0 auto;
-  width: 700px;
+  width: 100%;
 }
 @media (min-width: 1600px) {
   .container .main-inner {
@@ -497,7 +497,7 @@ body {
 .footer-inner {
   box-sizing: border-box;
   margin: 20px auto;
-  width: 700px;
+  width: 100%;
 }
 @media (min-width: 1600px) {
   .container .footer-inner {
@@ -878,7 +878,7 @@ pre .javascript .function {
   position: relative;
 }
 .headband {
-  height: 3px;
+  height: 0;
   background: #096;
 }
 .site-meta {
@@ -1535,7 +1535,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #fffb3c;
+  background: #38781d;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2132,16 +2132,19 @@ body {
 .header {
   position: relative;
   margin: 0 auto;
-  width: 960px;
+  height: 100%;
+  position: fixed;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .header {
     width: auto;
+    position: relative;
   }
 }
 @media (max-width: 767px) {
   .header {
     width: auto;
+    position: relative;
   }
 }
 .header-inner {
@@ -2151,6 +2154,7 @@ body {
   padding: 0;
   width: 240px;
   background: #fff;
+  height: 100%;
 }
 @media (min-width: 1600px) {
   .container .header-inner {
@@ -2169,6 +2173,9 @@ body {
     width: auto;
   }
 }
+.main {
+  margin-left: 255px;
+}
 .main:before,
 .main:after {
   content: " ";
@@ -2180,15 +2187,17 @@ body {
 @media (min-width: 768px) and (max-width: 991px) {
   .main {
     padding-bottom: 100px;
+    margin-left: 0;
   }
 }
 @media (max-width: 767px) {
   .main {
     padding-bottom: 100px;
+    margin-left: 0;
   }
 }
 .container .main-inner {
-  width: 960px;
+  width: 100%;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .container .main-inner {
@@ -2204,7 +2213,7 @@ body {
   float: right;
   box-sizing: border-box;
   padding: 40px;
-  width: 700px;
+  width: 100%;
   background: #fff;
   min-height: 700px;
 }
@@ -2243,7 +2252,7 @@ body {
   display: none;
 }
 .footer-inner {
-  width: 960px;
+  width: 100%;
 }
 .footer-inner:before {
   content: " ";
@@ -2375,6 +2384,11 @@ body {
   display: none;
   right: auto;
   bottom: auto;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  margin-top: 300px !important;
   -webkit-transform: none;
 }
 .sidebar-inner {
@@ -2386,6 +2400,12 @@ body {
 .sidebar-inner.affix {
   position: fixed;
   top: 0;
+  height: 100% !important;
+}
+.sidebar-inner.affix-bottom {
+  position: fixed;
+  top: 0 !important;
+  height: 100% !important;
 }
 .site-overview {
   margin: 0 2px;
